@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shoe_randomizer/catalog_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   Widget _getContent( // #1
@@ -9,7 +10,12 @@ class HomeScreen extends StatelessWidget {
         color: Theme.of(context).accentColor,
         elevation: 4.0,
         splashColor: Colors.blueGrey,
-        onPressed: () {})
+        onPressed: () {
+          Navigator.of(context)
+            .push(MaterialPageRoute<void>(builder: (BuildContext context) {
+          return CatalogScreen();
+        }));
+        })
     ]);
   }
 
